@@ -25,10 +25,12 @@
     justify-content: space-between;
     text-align: center;
     gap: 5px;
+    font-size: 19px;
   }
   
   .actorItem img {
     display: block;
     max-width: 100%;
     border-radius: 5px;
+    
   }

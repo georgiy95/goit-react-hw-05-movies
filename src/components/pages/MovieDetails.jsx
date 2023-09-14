@@ -77,7 +77,7 @@ const MovieDetails = () => {
       </div>
       </div>
       <div className={styled.additionalInfo}>
-        <h2>Additional information</h2>
+        <h2 className={styled.additional}>Additional information</h2>
         <ul className={styled.list}>
           <li><NavLink className={styled.listItem} to={`/movies/${movieId}/cast`}>Cast</NavLink></li>
           <li><NavLink className={styled.listItem} to={`/movies/${movieId}/reviews`}>Reviews</NavLink></li>
