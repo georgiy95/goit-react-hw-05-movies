@@ -1,0 +1,54 @@
+.moviesDetailsContainer {
+    padding-left: 20px;
+  }
+  
+  .wrapper {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .movieInfo {
+    padding: 10px;
+  }
+  
+  .additionalInfo {
+    margin-top: 10px;
+    border-top: 3px solid #e7e9fc;
+    border-bottom: 3px solid #e7e9fc;
+  }
+  
+  .list {
+    list-style: none;
+  }
+  
+  .listItem {
+    display: block;
+    width: 100px;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .listItem:hover,
+  .listItem:focus {
+    color: #ff5733;
+    transition: color 0.2s;
+  }
+  
+  .btn {
+    display: block;
+    padding: 5px 10px;
+    margin: 10px;
+    width: 80px;
+    border: none;
+    background-color: #4c959e;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn:hover,
+  .btn:focus {
+    background-color: #033036;
+    color: #fff;
+    transition: color 0.2s;
+  }

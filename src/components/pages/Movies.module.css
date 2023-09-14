@@ -1,0 +1,51 @@
+.moviesContainer {
+    padding: 30px;
+  }
+  
+  .searchInput {
+    padding: 10px;
+    border: 1px solid black;
+    width: 250px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    padding: 5px 10px;
+    width: 80px;
+    border: none;
+    background-color: #4c959e;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn:hover,
+  .btn:focus {
+    background-color: #033036;
+    color: #fff;
+    transition: color 0.2s;
+  }
+  
+  .resultsContainer {
+    margin-top: 20px;
+  }
+  
+  .resultsList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .resultsListItem {
+    margin-top: 5px;
+  }
+  .movieLink {
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+  .movieLink:hover {
+    background-color: #033036;
+    color: #fff;
+    transition: 0.5s;
+    border-radius: 4px;
+  }
