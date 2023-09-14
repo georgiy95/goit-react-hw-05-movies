@@ -1,28 +1,33 @@
 .moviesContainer {
-    padding: 30px;
+    padding-left: 20px;
   }
   
   .searchInput {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid rgba(255,107,10);
     width: 250px;
     margin-right: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
   }
+
   
   .btn {
-    padding: 5px 10px;
-    width: 80px;
-    border: none;
-    background-color: #4c959e;
-    border-radius: 5px;
+    padding: 8px;
+    width: 88px;
+    border: 1px solid #8e8f99;
+    border-radius: 10px;
+    border-color: rgba(255,107,10);
+    background-color: #fff;
+    color: rgba(255,107,10);
     cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
   }
   .btn:hover,
   .btn:focus {
-    background-color: #033036;
+    background-color: rgba(255,107,10);
     color: #fff;
-    transition: color 0.2s;
+    border-color: rgba(255,107,10);
   }
   
   .resultsContainer {
@@ -38,14 +43,12 @@
     margin-top: 5px;
   }
   .movieLink {
-    padding-left: 10px;
     text-decoration: none;
     color: black;
     font-size: 18px;
   }
   .movieLink:hover {
-    background-color: #033036;
-    color: #fff;
+    color: rgba(255,107,10);
     transition: 0.5s;
     border-radius: 4px;
   }

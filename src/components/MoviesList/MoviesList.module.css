@@ -16,8 +16,7 @@
     font-size: 18px;
   }
   .movieLink:hover {
-    background-color: #033036;
-    color: #fff;
+    color: rgba(255,107,10);
     transition: 0.5s;
     border-radius: 4px;
   }

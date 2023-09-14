@@ -47,6 +47,7 @@ const MovieDetails = () => {
   
   return (
     <div className={styled.moviesDetailsContainer}>
+      <div className={styled.mDContainer}>
       <button type='button' className={styled.btn} onClick={onGoBackClick} >
         Go back
       </button>
@@ -73,6 +74,7 @@ const MovieDetails = () => {
             </p>
             </div>
           </div>
+      </div>
       </div>
       <div className={styled.additionalInfo}>
         <h2>Additional information</h2>

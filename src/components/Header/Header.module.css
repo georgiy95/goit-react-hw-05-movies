@@ -4,7 +4,8 @@
     padding: 10px 20px;
     margin: 0;
     list-style: none;
-    border-bottom: 3px solid #e7e9fc;
+    border-bottom: 3px solid rgba(255,107,10);
+    background-color: rgb(0, 0, 255);
   }
   
   .header li {
@@ -12,17 +13,17 @@
   }
   
   .header .active {
-    color: #ff5733;
+    color: rgba(255,107,10);
   }
   
   .header a {
     font-size: 20px;
     font-weight: bold;
-    color: #000;
+    color: #fff;
     transition: color 0.2s;
     text-decoration: none;
   }
   
   .header a:hover {
-    color: #ff5733;
+    color: rgba(255,107,10);
   }
