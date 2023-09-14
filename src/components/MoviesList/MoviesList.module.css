@@ -3,8 +3,9 @@
   }
   
   .movieList {
-    list-style: none;
+   list-style: none;
     padding: 0;
+   
   }
   .movieItem {
     margin-bottom: 10px;
@@ -13,8 +14,14 @@
     padding-left: 5px;
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 20px;
+    list-style-type: none; 
+    
   }
+  .movieLink::before { 
+    content: "\1F4FD";
+   }
+
   .movieLink:hover {
     text-decoration: underline;
     color: rgba(255,107,10);
