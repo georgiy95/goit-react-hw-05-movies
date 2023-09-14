@@ -34,7 +34,7 @@ const Cast = ({movieId}) => {
           {movieCredits.map((actor) => (
             <div key={actor.id} className={styled.actorItem}>
               <img
-            src={actor.profile_path ? `https://image.tmdb.org/t/p/w200/${actor.profile_path}`: 'https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-Resize-gbtr6Z933uRGJf.jpg'}
+            src={actor.profile_path ? `https://image.tmdb.org/t/p/w200/${actor.profile_path}`: 'https://banffventureforum.com/wp-content/uploads/2019/08/No-Image.png'}
             alt={actor.name}
             width={250}
       />
