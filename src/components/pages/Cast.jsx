@@ -27,14 +27,14 @@ const Cast = ({movieId}) => {
   return (
     <div className={styled.castContainer}>
       <h2>Cast</h2>
-       {error ? (
+        {error ? (
         <p className={styled.error}>Error: {error}</p>
       ) : (
         <div className={styled.castList}>
           {movieCredits.map((actor) => (
             <div key={actor.id} className={styled.actorItem}>
-              <img
-            src={actor.profile_path ? `https://image.tmdb.org/t/p/w200/${actor.profile_path}`: 'https://banffventureforum.com/wp-content/uploads/2019/08/No-Image.png'}
+          <img
+            src={actor.profile_path ? `https://image.tmdb.org/t/p/w200/${actor.profile_path}`: 'https://icon-library.com/images/no-photo-icon/no-photo-icon-0.jpg'}
             alt={actor.name}
             width={250}
       />
