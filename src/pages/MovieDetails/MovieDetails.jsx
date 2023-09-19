@@ -51,7 +51,7 @@ const MovieDetails = () => {
         </div>
         
         <ul className={css.additionalInfo}>
-          <h2 className={css.additional}>Additional information:</h2>
+          <h2 className={css.additional}>Additional information</h2>
           <li className={css.item}>
             <Link className={css.listItem} to="cast" state={{ from: backLink }}>
               Cast
