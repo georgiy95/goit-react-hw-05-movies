@@ -4,6 +4,7 @@ import css from './SearchBar.module.css';
 const Searchbar = ({ onChange, onSubmit, query }) => {
   return (
     <form onSubmit={onSubmit}>
+       <h1 className={css.title}>Search Movies</h1>
       <input
         className={css.input}
         onChange={e => onChange(e.target.value)}

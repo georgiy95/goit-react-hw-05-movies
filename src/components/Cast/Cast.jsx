@@ -22,8 +22,8 @@ const Cast = () => {
               src={
                 profile_path
                   ? `https://image.tmdb.org/t/p/w300/${profile_path}`
-                  : defaultImg
-              }
+                  : 'https://banffventureforum.com/wp-content/uploads/2019/08/No-Image.png'}
+              
               alt={original_name}
             />
             <p className={css.name}>{original_name}</p>

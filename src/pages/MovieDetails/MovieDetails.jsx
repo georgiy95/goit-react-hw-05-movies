@@ -49,14 +49,16 @@ const MovieDetails = () => {
             </div>
           )}
         </div>
+        
         <ul className={css.additionalInfo}>
+          <h2 className={css.additional}>Additional information</h2>
           <li className={css.item}>
-            <Link className={css.link} to="cast" state={{ from: backLink }}>
+            <Link className={css.listItem} to="cast" state={{ from: backLink }}>
               Cast
             </Link>
           </li>
           <li className={css.item}>
-            <Link className={css.link} to="reviews" state={{ from: backLink }}>
+            <Link className={css.listItem} to="reviews" state={{ from: backLink }}>
               Reviews
             </Link>
           </li>

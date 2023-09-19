@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <main>
-      <h1 className={css.title}>Trending Movies</h1>
+      <h1 className={css.title}>Trending Today</h1>
       {movies && <MovieList movies={movies} />}
     </main>
   );

@@ -1,17 +1,20 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  padding-right: 20px;
   margin: -10px;
   list-style: none;
+  
 }
 
 .item {
   padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: 1px solid #8e8f99;
+  border-color: rgba(255,107,10);
+  border-radius: 10px;
   margin: 10px;
   width: 150px;
+  margin-left: 20px;
 }
 
 .img {
