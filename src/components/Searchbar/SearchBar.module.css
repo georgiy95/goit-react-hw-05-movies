@@ -1,0 +1,29 @@
+.input {
+  border-radius: 2px 0 0 2px;
+  border: none;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 12px;
+  color: inherit;
+  border: 1px solid black;
+  border-right: none;
+  outline: none;
+}
+
+.button {
+  background: #ffffff;
+  border-radius: 0 2px 2px 0;
+  border: 1px solid black;
+  border-left: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 12px;
+  color: inherit;
+  transition: background-color 200ms;
+}
+
+.button:hover {
+  background-color: aqua;
+}

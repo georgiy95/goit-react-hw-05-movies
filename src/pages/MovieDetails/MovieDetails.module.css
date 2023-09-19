@@ -1,0 +1,49 @@
+.backButton {
+  background-color: rgb(140, 178, 247);
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+
+  font-weight: 500;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 15px;
+  transition: background-color 200ms;
+}
+
+.backButton:hover {
+  background-color: aqua;
+}
+
+.wrap {
+  display: flex;
+}
+
+.image {
+  margin-right: 20px;
+  width: 250px;
+}
+
+.text {
+  color: #5d5c5c;
+}
+
+.link {
+  font-size: 14pt;
+}
+
+.additionalInfo {
+  padding: 20px 40px;
+  border-top: 1px solid #5d5c5c;
+  border-bottom: 1px solid #5d5c5c;
+}
+
+.item {
+  color: #2a2a2a;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
