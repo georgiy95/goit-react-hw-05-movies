@@ -6,7 +6,6 @@ import css from './Cast.module.css';
 const Cast = () => {
   const { movieId } = useParams();
   const [cast, setCast] = useState(null);
-  const defaultImg = 'https://pbs.twimg.com/media/EnEtA72XIAIsY5i.jpg';
 
   useEffect(() => {
     getMovieCastAxios(movieId).then(setCast);
