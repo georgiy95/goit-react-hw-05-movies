@@ -1,33 +1,39 @@
-import { getMovieReviewsAxios } from 'api/fetchData';
-import { useParams } from 'react-router';
-import { useState, useEffect } from 'react';
-import css from './Reviews.module.css';
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
+import { fetchMoviesReviews } from 'apiFetch/Api';
 const Reviews = () => {
-  const { movieId } = useParams();
-  const [reviews, setReviews] = useState(null);
-
+  const { id } = useParams();
+  const [movieInfo, setMovieInfo] = useState([]);
   useEffect(() => {
-    getMovieReviewsAxios(movieId).then(setReviews);
-  }, [movieId]);
-  if (!reviews) return null;
-
+    const fetchData = async () => {
+      try {
+        const response = await fetchMoviesReviews(id);
+        setMovieInfo(response.results);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, [id]);
   return (
     <>
-      {reviews.length !== 0 ? (
-        <ul className={css.reviewList}>
-          {reviews.map(({ id, author, content }) => (
-            <li key={id} className={css.reviewItem}>
-              <h2  className={css.authorName}>{author}</h2>
-              <p>{content}</p>
-            </li>
-          ))}
+      {movieInfo.length !== 0 && (
+        <ul>
+          {movieInfo?.map(el => {
+            return (
+              <li key={el.id}>
+                <h3>Author: {el.author_details.username}</h3>
+                <p>{el.content}</p>
+              </li>
+            );
+          })}
         </ul>
-      ) : (
-        'Sorry, there are no reviews for this movie'
+      )}
+      {movieInfo.length === 0 && (
+        <div>We don't have any reviews for this movie.</div>
       )}
     </>
   );
 };
-
 export default Reviews;

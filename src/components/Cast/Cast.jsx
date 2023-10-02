@@ -1,37 +1,40 @@
-import { getMovieCastAxios } from 'api/fetchData';
-import { useParams } from 'react-router';
-import { useState, useEffect } from 'react';
-import css from './Cast.module.css';
 
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { fetchMoviesCast } from 'apiFetch/Api';
 const Cast = () => {
-  const { movieId } = useParams();
-  const [cast, setCast] = useState(null);
-
+  const { id } = useParams();
+  const [movieInfo, setMovieInfo] = useState([]);
   useEffect(() => {
-    getMovieCastAxios(movieId).then(setCast);
-  }, [movieId]);
-
+    const fetchData = async () => {
+      try {
+        const response = await fetchMoviesCast(id);
+        setMovieInfo(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, [id]);
   return (
-    cast && (
-      <ul className={css.list}>
-        {cast.map(({ id, original_name, character, profile_path }) => (
-          <li className={css.item} key={id}>
+    <ul>
+      {movieInfo?.cast?.map(actor => {
+        return (
+          <li key={actor.id}>
             <img
-              className={css.img}
+              alt={actor.name}
               src={
-                profile_path
-                  ? `https://image.tmdb.org/t/p/w300/${profile_path}`
-                  : 'https://banffventureforum.com/wp-content/uploads/2019/08/No-Image.png'}
-              
-              alt={original_name}
-            />
-            <p className={css.name}>{original_name}</p>
-            <p className={css.character}>Character: {character}</p>
+                actor.profile_path
+                  ? `https://image.tmdb.org/t/p/w300${actor.profile_path}`
+                  : 'No picture'
+              }
+            ></img>
+            <p>Name: {actor.name}</p>
+            <p>character: {actor.character}</p>
           </li>
-        ))}
-      </ul>
-    )
+        );
+      })}
+    </ul>
   );
 };
-
 export default Cast;
