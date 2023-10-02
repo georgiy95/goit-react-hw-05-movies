@@ -46,14 +46,13 @@ export const MovieDetails = () => {
           <p>{movieInfo.overview}</p>
           <h3>Genres</h3>
           <ul className={css.genreList}>
-            {movieInfo?.genres?.map(el => (
-              <li key={el.id}>{el.name}</li>
+            {movieInfo?.genres?.map(el => (<li key={el.id}>{el.name},</li>
             ))}
           </ul>
         </div>
       </section>
       <section className={css.additionalInfo}>
-        <h3 className={css.additional}>Additional information</h3>
+        <h3 className={css.additional}>Additional information:</h3>
         <div className={css.item}>
           <Link className={css.listItem} to={`/movies/${id}/cast`}>Cast</Link>
         </div>
