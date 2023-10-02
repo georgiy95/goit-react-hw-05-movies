@@ -1,9 +1,9 @@
 import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-
 import { Link } from 'react-router-dom';
 import css from './MovieDetails.module.css';
-import { fetchMoviesById } from 'apiFetch/Api';
+import { fetchMoviesById } from 'api/Api';
+
 export const MovieDetails = () => {
   const [movieInfo, setMovieInfo] = useState([]);
   const { id } = useParams();
@@ -25,10 +25,11 @@ export const MovieDetails = () => {
   return (
     <main>
       <Link to={backLink.current}>
-        <button className={css.backButton}> go back</button>
+        <button className={css.backButton}> Go back</button>
       </Link>
       <section className={css.movieDescription}>
         <img
+        className={css.image}
           src={
             movieInfo?.poster_path
               ? `https://image.tmdb.org/t/p/w300${movieInfo.poster_path}`
@@ -51,13 +52,13 @@ export const MovieDetails = () => {
           </ul>
         </div>
       </section>
-      <section>
-        <h3>Additional information</h3>
-        <div>
-          <Link to={`/movies/${id}/cast`}>Cast</Link>
+      <section className={css.additionalInfo}>
+        <h3 className={css.additional}>Additional information</h3>
+        <div className={css.item}>
+          <Link className={css.listItem} to={`/movies/${id}/cast`}>Cast</Link>
         </div>
-        <div>
-          <Link to={`/movies/${id}/reviews`}>Reviews</Link>
+        <div className={css.item}>
+          <Link className={css.listItem} to={`/movies/${id}/reviews`}>Reviews</Link>
         </div>
       </section>
       <section>

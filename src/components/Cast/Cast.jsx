@@ -1,7 +1,7 @@
-
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { fetchMoviesCast } from 'apiFetch/Api';
+import { fetchMoviesCast } from 'api/Api';
+import css from './Cast.module.css';
 const Cast = () => {
   const { id } = useParams();
   const [movieInfo, setMovieInfo] = useState([]);
@@ -17,20 +17,21 @@ const Cast = () => {
     fetchData();
   }, [id]);
   return (
-    <ul>
+    <ul className={css.list}>
       {movieInfo?.cast?.map(actor => {
         return (
-          <li key={actor.id}>
+          <li className={css.item} key={actor.id}>
             <img
+            className={css.img}
               alt={actor.name}
               src={
                 actor.profile_path
                   ? `https://image.tmdb.org/t/p/w300${actor.profile_path}`
-                  : 'No picture'
+                  : 'https://banffventureforum.com/wp-content/uploads/2019/08/No-Image.png'
               }
             ></img>
-            <p>Name: {actor.name}</p>
-            <p>character: {actor.character}</p>
+            <p className={css.name}>{actor.name}</p>
+            <p className={css.character}>Character: {actor.character}</p>
           </li>
         );
       })}
