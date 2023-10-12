@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Header } from './Header/Header';
-import { HomePage } from './HomePage/HomePage';
+import { HomePage } from '../pages/HomePage/HomePage';
 import { MoviesPage } from './MoviesPage/MoviesPage';
 import { MovieDetails } from './MovieDetails/MovieDetails';
 
