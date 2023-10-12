@@ -11,8 +11,7 @@ export const MoviesPage = () => {
  
 
   useEffect(() => {
-    if (query === '' || query === null) {
-      setMovies([]);
+    if (!query) {
       return;
     }
     const fetchData = async () => {
@@ -35,11 +34,13 @@ export const MoviesPage = () => {
   return (
     <main>
       <form onSubmit={handleSubmit}>
-      <h1 className={css.title}>Search Movies</h1>
+      <h2 className={css.title}>Search Movies</h2>
         <input name="username"  className={css.input}></input>
         <button className={css.button}>Search</button>
-        <MovieList movies={movies} />
       </form>
+      <MovieList movies={movies} />
     </main>
   );
 };
+
+export default MoviesPage;

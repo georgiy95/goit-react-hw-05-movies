@@ -66,3 +66,5 @@ export const MovieDetails = () => {
     </main>
   );
 };
+
+export default MovieDetails;
